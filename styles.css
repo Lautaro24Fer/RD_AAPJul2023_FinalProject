@@ -1,0 +1,97 @@
+/*ESTILOS UNIVERSALES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorBlack: rgb(15, 15, 15);
+}
+
+body{
+    background-color: var(--colorBlack);
+}
+/*FIN DE ESTILOS UNIVERSALES*/
+
+/* -----MEDIA QUERIES-----*/
+@media (max-width: 480px){/*CELULARES*/
+    /*HEADER*/
+    .lf__mtc-navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 1.5em 0 1.5em;
+    }
+    .lf__mtc-navbar-logo img{
+        width: 2.5em;
+    }
+    .lf__mtc-navbar-btnContainer{
+        display: flex;
+        gap: 2em;
+        align-items: center;
+    }
+    .lf__mtc-navbar-btnContainer-btn svg{
+        filter: invert(100%);
+        width: 1.5em;
+        height: 1.5em;
+    }
+    /*===================*/
+    /*CARROUSEL*/
+    .lf__mtc-historiesCarrousel{
+        margin: 2em 0 0 0;
+        display: flex;
+        gap: 1em;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    .lf__mtc-historiesCarrousel-element{
+        text-align: center;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 5em;
+    }
+    .lf__mtc-historiesCarrousel .firstElement{
+        margin-left: .6em;
+    }
+    .lf__mtc-historiesCarrousel .lastElement{
+        margin-right: 1em;
+    }
+    .lf__mtc-historiesCarrousel-element .imageElement{
+        border: 1px solid rgb(54, 54, 54);
+        border-radius: 100%;
+        width: min-content;
+        height: min-content;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .lf__mtc-historiesCarrousel-element .imageElement img{
+        height: 4em;
+        border-radius: 100%;
+    }
+    .lf__mtc-historiesCarrousel-element .textElement {
+        max-width: 5em;
+        color: white;
+        font-size: small;
+        text-overflow: ellipsis;
+        white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+        overflow: hidden;
+    }
+    /*===================*/
+    
+}
+@media (min-width: 481px){/*TABLETS*/
+    
+}
+@media (min-width: 769px){/*LAPTOPS*/
+   
+}
+@media (min-width:1025px){/*ORDENADORES*/
+   
+}
+/* -----FIN DE MEDIA QUERIES-----*/

@@ -25,9 +25,37 @@ hr{
 
 /* -----MEDIA QUERIES-----*/
 @media (max-width: 480px){/*CELULARES*/
+    /*NAVBAR PARA MOVILES*/
+    .lf__navbar-inPT{
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        /* background-image: linear-gradient(rgba(15, 15, 15, 0.736),rgba(15, 15, 15, 0.911)); */
+        background-color: rgba(15, 15, 15, 0.980);
+        z-index: 100;
+        width: 100%;
+        justify-content: center;
+        padding: 1em 0 .2em 0;
+        gap: 3.5em;
+        border-top: 1px solid var(--colorGrey);
+    }
+    .lf__navbar-inPT a{
+        text-decoration: none;
+        color: white;
+    }
+    .lf__navbar-inPT button{
+        background-color: transparent;
+        border: none;
+    }
+    .lf__navbar-inPT label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /*==================*/
     /*HEADER*/
     .lf__main-tag-content{
-        padding: 3em 0 5em 0;
+        padding: 4em 0 5em 0;
     }
     .lf__mtc-navbar{
         display: flex;
@@ -49,7 +77,8 @@ hr{
         gap: 2em;
         align-items: center;
     }
-    .lf__mtc-navbar-btnContainer-btn svg{
+    .lf__mtc-navbar-btnContainer-btn svg,
+    .lf__navbar-inPT svg{
         filter: invert(100%);
         width: 1.5em;
         height: 1.5em;
@@ -127,18 +156,24 @@ hr{
     }
     /*FAVORITOS*/
     .lf__mtc-af-favourites,
-    .lf__mtc-af-sugerencies{
+    .lf__mtc-af-sugerencies,
+    .lf__mtc-af-card,
+    .lf__mtc-af-listenAgain{
         margin: 1.5em 0 0 0;
         color: white;
     }
     .lf__mtc-af-favourites .favourites__header,
-    .lf__mtc-af-sugerencies .sugerencies__header{
+    .lf__mtc-af-sugerencies .sugerencies__header,
+    .lf__mtc-af-card .card__header,
+    .lf__mtc-af-listenAgain .listenAgain__header{
         display: flex;
         align-items: center;
         gap: .5em;
     }
     .lf__mtc-af-favourites .favourites__header .favourites__header-logo,
-    .lf__mtc-af-sugerencies .sugerencies__header .sugerencies__header-logo{
+    .lf__mtc-af-sugerencies .sugerencies__header .sugerencies__header-logo,
+    .lf__mtc-af-card .card__header .card__header-logo,
+    .lf__mtc-af-listenAgain .listenAgain__header .listenAgain__header-logo{
         border: 1px solid var(--colorGrey);
         height: 2.5em;
         width: 2.5em;
@@ -148,25 +183,31 @@ hr{
         align-items: center;
     }
     .lf__mtc-af-favourites .favourites__header .favourites__header-logo svg,
-    .lf__mtc-af-sugerencies .sugerencies__header .sugerencies__header-logo svg{
+    .lf__mtc-af-sugerencies .sugerencies__header .sugerencies__header-logo svg,
+    .lf__mtc-af-card .card__header .card__header-logo svg,
+    .lf__mtc-af-listenAgain .listenAgain__header .listenAgain__header-logo svg,
+    .card__footer-button svg{
         filter: invert(100%);
         height: 1.5em;
         width: 1.5em;
     }
     /*=CARROUSEL=*/
     .favourites__carrousel-container,
-    .sugerencies__carrousel-container{
+    .sugerencies__carrousel-container,
+    .listenAgain__carrousel-container{
         display: flex;
         flex-wrap: nowrap;
         overflow: scroll;
         gap: 1em;
     }
     .favourites__carrousel-container::-webkit-scrollbar,
-    .sugerencies__carrousel-container::-webkit-scrollbar {
+    .sugerencies__carrousel-container::-webkit-scrollbar,
+    .listenAgain__carrousel-container::-webkit-scrollbar {
         display: none;
       }
     .favourites__carrousel-element,
-    .sugerencies__carrousel-element{
+    .sugerencies__carrousel-element,
+    .listenAgain__carrousel-element{
         margin: 2em 0 0 0;
         height: max-content;
         display: flex;
@@ -175,7 +216,8 @@ hr{
         flex: 1 0 auto;
     }
     .favourites__ce-img,
-    .sugerencies__ce-img{
+    .sugerencies__ce-img,
+    .listenAgain__ce-img{
         height: 5em;
         width: 5em;
         display: flex;
@@ -183,37 +225,43 @@ hr{
         align-items: center;
     }
     .favourites__ce-img img,
-    .sugerencies__ce-img img{
+    .sugerencies__ce-img img,
+    .listenAgain__ce-img img{
         height: 5em;
         width: 5em;
         border-radius: 5px;
     }
     .favourites__ce-img img:hover,
-    .sugerencies__ce-img img:hover{
+    .sugerencies__ce-img img:hover,
+    .listenAgain__ce-img img:hover{
         height: 4.7em;
         width: 4.7em;
         transition: .1s;
         opacity: .7;
     }
     .favourites__credits,
-    .sugerencies__credits{
+    .sugerencies__credits,
+    .listenAgain__credits{
         display: flex;
         flex-direction: column;
     }
     .favourites__ce-title,
-    .sugerencies__ce-title{
+    .sugerencies__ce-title,
+    .listenAgain__ce-title{
         text-align: left;   
         width: 5em;
         margin-top: .2em;
         height: min-content;
     }
     .favourites__ce-artistName,
-    .sugerencies__ce-artistName{
+    .sugerencies__ce-artistName,
+    .listenAgain__ce-artistName{
         color: var(--colorGreyClaro);
         text-align: left; 
     }
     .favourites__ce-title h6, .favourites__ce-artistName p,
-    .sugerencies__ce-title h6, .sugerencies__ce-artistName p{
+    .sugerencies__ce-title h6, .sugerencies__ce-artistName p,
+    .listenAgain__ce-title h6, .listenAgain__ce-artistName p{
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -221,10 +269,51 @@ hr{
     /*=FIN CARROUSEL*/
     /*FIN FAVORITOS*/
     /*TARJETAS*/
-    .lf__mtc-af-card .card-img-overlay{
+
+    .card__container{
+        margin: 1em 0 3em 0;
+    }
+    .card-title, .card-text{
         opacity: 0;
+        transition: .3s;
+    }
+    .card-btn{
+        background-color: var(--colorBlack);
+        border: none;
+    }
+    .card-img{
+        height: 20em;
+        object-fit: cover;
+    }
+    .card-img-overlay{
+        overflow-y: auto;
+    }
+    .lf__card-text{
+        color: white;
+        text-align: left;
+    }
+    .card__footer{
+        display: flex;
+        gap: 1.5em;
+        padding: .5em 0 0 0;
+        position: relative;
+    }
+    .btn-absolute{
+        position: absolute;
+        right: 0;
     }
     /*FIN DE LA TARJETA*/
+
+    /*FOOTER*/
+    .lf__footer-tag{
+        color: var(--colorGrey);
+        font-size: small;
+    }
+    .lf__footer-tag-content{
+        display: flex;
+        justify-content: center;
+    }
+    /*==================*/
     /*=====</FEED>=====*/
     
 }

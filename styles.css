@@ -45,6 +45,10 @@ hr {
         border-top: 1px solid var(--colorGrey);
     }
 
+    .lf__navbar-inPT a{
+        text-decoration: none;
+    }
+
 
     .lf__navbar-inPT button {
         background-color: transparent;
@@ -63,6 +67,7 @@ hr {
     .lf__main-tag-content {
         padding: 4em 0 5em 0;
     }
+
 
     .lf__mtc-navbar {
         display: flex;
@@ -173,6 +178,7 @@ hr {
 
     /*ASIDES*/
 
+    /*sesion no iniciada*/
     .lf__aside-tag-tl-perfil{
         position: fixed;
         right: -80%;
@@ -205,6 +211,28 @@ hr {
         width: 1.5em;
         height: 1.5em;
     }
+    /*sesion iniciada*/
+    .lf-at-tl-header{
+        display: flex;
+        flex-direction: column;
+    }
+    .lf-at-tl-header-title{
+        margin: 0 0 1em 0;
+    }
+    .lf-at-tl-header-subtitle{
+        justify-content: space-evenly;
+        display: flex;
+        gap: .5em;
+    }
+    
+    .__header-subtitle-data{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+
 
     /*===================*/
 
@@ -253,7 +281,8 @@ hr {
     .lf__mtc-af-card .card__header .card__header-logo svg,
     .lf__mtc-af-listenAgain .listenAgain__header .listenAgain__header-logo svg,
     .card__footer-button svg,
-    .lf__mtc-af-reels .reels__header .reels__header-logo svg {
+    .lf__mtc-af-reels .reels__header .reels__header-logo svg,
+    .lf-at-tl-header-subtitle svg {
         filter: invert(100%);
         height: 1.5em;
         width: 1.5em;

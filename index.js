@@ -53,10 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function cerrarMenu(){
       menuAside.style.right = "-80%";
+      menuAside.style.boxShadow = "0 1px 2px -3px rgba(0,0,0,0.14)";
     }
 
     function abrirMenu(){
      menuAside.style.right = "0";
+     menuAside.style.boxShadow = "-88px 1px 2px -3px rgba(0,0,0,0.50)";
     }
 
 

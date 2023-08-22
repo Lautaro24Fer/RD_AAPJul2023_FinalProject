@@ -41,14 +41,10 @@ hr {
         width: 100%;
         justify-content: center;
         padding: 1em 0 .2em 0;
-        gap: 3.5em;
+        gap: 5em;
         border-top: 1px solid var(--colorGrey);
     }
 
-    .lf__navbar-inPT a {
-        text-decoration: none;
-        color: white;
-    }
 
     .lf__navbar-inPT button {
         background-color: transparent;
@@ -59,6 +55,7 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: white;
     }
 
     /*==================*/
@@ -174,7 +171,45 @@ hr {
 
     /*===================*/
 
+    /*ASIDES*/
+
+    .lf__aside-tag-tl-perfil{
+        position: fixed;
+        right: -80%;
+        bottom: 0;
+        top: 0;
+        width: 80%;
+        background-color: var(--colorBlack);
+        border: 1px solid var(--colorGreyClaro);
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        color: white;
+        z-index: 200;
+        transition: right 0.2s ease-in-out;
+        padding: 5em 1em 0 1em;
+    }
+    .btn__closeAside{
+        background-color: transparent;
+        border: none;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: larger;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+    }
+    .btn__closeAside svg{
+        fill: red;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    /*===================*/
+
     /*=====<FEED>=====*/
+
     .lf__mtc-articleFeed {
         padding: 0 1em 0 1em;
     }
@@ -381,8 +416,8 @@ hr {
     }
 
     .reels__carrousel-element-content {
-        width: 7em;
-        height: 10em;
+        width: 13em;
+        height: 18em;
         position: relative;
     }
 

@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    //reels
 
+    //reels
       const carrouselGifContainers = document.querySelectorAll(".reels__carrousel-element-content");
 
       carrouselGifContainers.forEach(function (gifContainer) {
@@ -44,70 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-  });
+    const menuAside = document.getElementById("lf__aside-tag-perfil");
+    const btn_cerrarMenu = document.getElementById("nb__btn-perfil-closeAside");
+    const btn_abrirMenu = document.getElementById("nb__btn-perfil");
+
+    btn_cerrarMenu.addEventListener("click", cerrarMenu);
+    btn_abrirMenu.addEventListener("click", abrirMenu);
+
+    function cerrarMenu(){
+      menuAside.style.right = "-80%";
+    }
+
+    function abrirMenu(){
+     menuAside.style.right = "0";
+    }
 
 
+  });//fin de codigo
 
-
-
-
-
-
-
-
-//   //gif
-//   const carrouselGifContainers = document.querySelectorAll(".lf__mtc-af-reels");
-// // const staticImage = hoverContainer.querySelector("img");
-// // const gifImage = hoverContainer.querySelector(".gif");
-// const isMobile = window.innerWidth <= 768;
-
-// carrouselGifContainers.forEach(function(gifContainer){
-// // //   const gifContainer_img = gifContainer.closest(".lf__img-img");
-// // //   const gifContainer_gif = gifContainer.closest(".lf__img-gif");
-//   if(isMobile){
-//     //dispositivos moviles
-//     gifContainer.addEventListener("touchstart", cambiarOpacidadMovil);
-//     const cambiarOpacidadMovil = () => {
-//       if(gifContainer_img.style.opacity === "1"){
-//         gifContainer_img.style.opacity = "0";
-//         gifContainer_gif.style.opacity = "1";
-//       }
-//       else{
-//         gifContainer_img.style.opacity = "0";
-//         gifContainer_gif.style.opacity = "1";
-//       }
-//     }
-//     }
-//     else{
-//     //dispositivos grandes
-//         gifContainer.addEventListener("mouseover",cambiarOpacidadNoMovil);
-//         const cambiarOpacidadNoMovil = () => {
-//           if(gifContainer_img.style.opacity === "1"){
-//             gifContainer_img.style.opacity = "0";
-//             gifContainer_gif.style.opacity = "1";
-//           }
-//           else{
-//             gifContainer_img.style.opacity = "0";
-//             gifContainer_gif.style.opacity = "1";
-//           }
-//         }
-//     }
-// });
-
-
-
-
-// const handleImageChange = () => {
-//   if (isMobile) {
-//     staticImage.style.opacity = "0";
-//     gifImage.style.opacity = "1";
-//   } else {
-//     staticImage.style.opacity = "1";
-//     gifImage.style.opacity = "0";
-//   }
-// };
-
-// hoverContainer.addEventListener("mouseover", handleImageChange);
-// hoverContainer.addEventListener("mouseout", handleImageChange);
-// hoverContainer.addEventListener("touchstart", handleImageChange);
-// hoverContainer.addEventListener("touchend", handleImageChange);

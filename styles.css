@@ -178,6 +178,102 @@ hr {
 
     /*ASIDES*/
 
+    .logoAbsolute{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1.5em;
+    }
+    .logoAbsolute svg{
+        fill: rgb(40, 40, 40);
+        height: 2em;
+    }
+
+    .lf__aside-tag-tl-messages{/*bandeja de mensajes*/
+        position: fixed;
+        right: -100%;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--colorBlack);
+        border: 1px solid var(--colorGreyClaro);
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        color: white;
+        z-index: 200;
+        transition: right 0.2s ease-in-out;
+        padding: 5em 1em 0 1em;
+    }
+
+    .lf-at-tl-messages-body{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        overflow-y: auto;
+        padding: 0 0 3em 0;
+    }
+
+    .tl-mb-element{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    .tl-mb-element-txt-name,
+    .tl-mb-element-txt-undername-time{
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    .tl-mb-element-txt-undername{
+        font-size: small;
+        display: flex;
+        gap: .3em;
+    }
+    .tl-mb-element-txt-undername-msgContent{
+        min-width: 2em;
+        max-width: 9em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .tl-mb-element-txt-undername-dot svg{
+        fill: rgb(143, 255, 246);
+    }
+
+    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img{
+        width: 5em;
+        height: 5em;
+        border-radius: 100%;
+    }
+
+    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    .tl-mb-element-txt{
+        display: flex;
+        flex-direction: column;
+    }
+    .lf-at-tl-header-messages-title{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    .btn__closeMessageAside{
+        background-color: transparent;
+        border: none;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: larger;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1em;
+    }
+
     /*sesion no iniciada*/
     .lf__aside-tag-tl-perfil{
         position: fixed;
@@ -195,23 +291,7 @@ hr {
         transition: right 0.2s ease-in-out;
         padding: 5em 1em 0 1em;
     }
-    .lf__aside-tag-tl-messages{/*bandeja de mensajes*/
-        position: fixed;
-        right: -100%;
-        bottom: 0;
-        top: 0;
-        width: 100%;
-        background-color: var(--colorBlack);
-        border: 1px solid var(--colorGreyClaro);
-        border-right: none;
-        border-top: none;
-        border-bottom: none;
-        color: white;
-        z-index: 200;
-        transition: right 0.2s ease-in-out;
-        padding: 5em 1em 0 1em;
-    }
-    .btn__closeMessageAside{
+    .btn__closeAside{
         background-color: transparent;
         border: none;
         width: 1.5em;
@@ -222,19 +302,8 @@ hr {
         left: 0;
         margin: 1em;
     }
-    .btn__closeAside{
-        background-color: transparent;
-        border: none;
-        width: 1.5em;
-        height: 1.5em;
-        font-size: larger;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 1em;
-    }
     .btn__closeAside svg{
-        fill: red;
+        filter: invert(100%);
         width: 1.5em;
         height: 1.5em;
     }
@@ -310,7 +379,8 @@ hr {
     .card__footer-button svg,
     .lf__mtc-af-reels .reels__header .reels__header-logo svg,
     .lf-at-tl-header-subtitle svg,
-    .btn__closeMessageAside svg {
+    .btn__closeMessageAside svg,
+    .lf-at-tl-header-messages-title svg {
         filter: invert(100%);
         height: 1.5em;
         width: 1.5em;

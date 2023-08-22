@@ -1,6 +1,9 @@
 
 //tarjetas
 document.addEventListener("DOMContentLoaded", function () {
+
+  
+
     const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
   
     botonesCambiarOpacidad.forEach(function (boton) {
@@ -44,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
+    const body = document.body;
+
     const menuAside = document.getElementById("lf__aside-tag-perfil");
     const btn_cerrarMenu = document.getElementById("nb__btn-perfil-closeAside");
     const btn_abrirMenu = document.getElementById("nb__btn-perfil");
@@ -54,11 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function cerrarMenu(){
       menuAside.style.right = "-80%";
       menuAside.style.boxShadow = "0 1px 2px -3px rgba(0,0,0,0.14)";
+      menuAside.style.overflowY = "hidden"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+      body.style.overflowY = "auto";
     }
 
     function abrirMenu(){
-     menuAside.style.right = "0";
-     menuAside.style.boxShadow = "-88px 1px 2px -3px rgba(0,0,0,0.50)";
+       menuAside.style.right = "0";
+       menuAside.style.boxShadow = "-88px 1px 2px -3px rgba(0,0,0,0.50)";
+       menuAside.style.overflowY = "auto"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+       body.style.overflowY = "hidden";
     }
 
     //BANDEJA DE MENSAJES ANIMACION
@@ -71,10 +80,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function cerrarBandejaMensajes(){
       bandejaMensajes.style.right = "-100%";
+      bandejaMensajes.style.overflowY = "hidden"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+      body.style.overflowY = "auto";
     }
 
     function abrirBandejaMensajes(){
-     bandejaMensajes.style.right = "0";
+       bandejaMensajes.style.right = "0";
+       bandejaMensajes.style.overflowY = "auto";
+       body.style.overflowY = "hidden";
     }
 
 

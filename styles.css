@@ -195,6 +195,33 @@ hr {
         transition: right 0.2s ease-in-out;
         padding: 5em 1em 0 1em;
     }
+    .lf__aside-tag-tl-messages{/*bandeja de mensajes*/
+        position: fixed;
+        right: -100%;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--colorBlack);
+        border: 1px solid var(--colorGreyClaro);
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        color: white;
+        z-index: 200;
+        transition: right 0.2s ease-in-out;
+        padding: 5em 1em 0 1em;
+    }
+    .btn__closeMessageAside{
+        background-color: transparent;
+        border: none;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: larger;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1em;
+    }
     .btn__closeAside{
         background-color: transparent;
         border: none;
@@ -282,7 +309,8 @@ hr {
     .lf__mtc-af-listenAgain .listenAgain__header .listenAgain__header-logo svg,
     .card__footer-button svg,
     .lf__mtc-af-reels .reels__header .reels__header-logo svg,
-    .lf-at-tl-header-subtitle svg {
+    .lf-at-tl-header-subtitle svg,
+    .btn__closeMessageAside svg {
         filter: invert(100%);
         height: 1.5em;
         width: 1.5em;

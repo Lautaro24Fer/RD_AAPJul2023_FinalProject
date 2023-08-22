@@ -61,6 +61,22 @@ document.addEventListener("DOMContentLoaded", function () {
      menuAside.style.boxShadow = "-88px 1px 2px -3px rgba(0,0,0,0.50)";
     }
 
+    //BANDEJA DE MENSAJES ANIMACION
+    const bandejaMensajes = document.getElementById("bandejaMensajesAside");
+    const btn_cerrarBandejaMensajes = document.getElementById("nb__btn-message-closeAside");
+    const btn_abrirBandejaMensajes = document.getElementById("btnMessagesAside");
+
+    btn_cerrarBandejaMensajes.addEventListener("click", cerrarBandejaMensajes);
+    btn_abrirBandejaMensajes.addEventListener("click", abrirBandejaMensajes);
+
+    function cerrarBandejaMensajes(){
+      bandejaMensajes.style.right = "-100%";
+    }
+
+    function abrirBandejaMensajes(){
+     bandejaMensajes.style.right = "0";
+    }
+
 
   });//fin de codigo
 

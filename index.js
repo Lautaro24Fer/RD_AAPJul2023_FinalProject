@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function abrirMenu(){
        menuAside.style.right = "0";
-       menuAside.style.boxShadow = "-88px 1px 2px -3px rgba(0,0,0,0.50)";
+       menuAside.style.boxShadow = "-200px 1px 2px -3px rgba(0,0,0,0.50)";
        menuAside.style.overflowY = "auto"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
        body.style.overflowY = "hidden";
     }

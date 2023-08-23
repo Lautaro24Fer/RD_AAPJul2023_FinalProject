@@ -27,9 +27,10 @@ hr {
 /*FIN DE ESTILOS UNIVERSALES*/
 
 /* -----MEDIA QUERIES-----*/
-@media (max-width: 480px) {
 
-    /*CELULARES*/
+
+@media (max-width: 768px) {
+    /*TABLETS*/
     /*NAVBAR PARA MOVILES*/
     .lf__navbar-inPT {
         position: fixed;
@@ -334,6 +335,7 @@ hr {
         justify-content: space-evenly;
         display: flex;
         gap: .5em;
+        text-align: center;
     }
 
     .__header-subtitle-data {
@@ -353,6 +355,8 @@ hr {
         align-items: center;
         justify-content: center;
     }
+
+
 
     .lf__mtc-historiesCarrousel-element .perfil__disco-favorito img {
         height: 4em;
@@ -673,17 +677,28 @@ hr {
     /*FIN DE CARROUSEL DE REELS*/
 
     /*=====</FEED>=====*/
-
-}
-
-@media (min-width: 481px) {
-    /*TABLETS*/
-
 }
 
 @media (min-width: 769px) {
     /*LAPTOPS*/
-
+    body svg, body img{
+        width: 1em;
+        height: 1em;
+    }
+    .gridBody{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        gap: 1em;
+    }
+    .lf__mtc-navbar{
+        display: none;
+    }
+    .lf__main-tag{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width:1025px) {

@@ -374,7 +374,8 @@ hr {
     }
 
     /*seccion de configuracion*/
-    .lf__aside-tag-tl-config {
+    .lf__aside-tag-tl-config,
+    .lf__aside-tag-tl-search {
         position: fixed;
         right: -100%;
         bottom: 0;
@@ -627,6 +628,11 @@ hr {
     .lf__footer-tag-content {
         display: flex;
         justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    .lf__footer-tag-content svg{
+        fill: var(--colorGrey)
     }
 
     /*==================*/

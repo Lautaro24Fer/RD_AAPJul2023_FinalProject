@@ -109,6 +109,24 @@ document.addEventListener("DOMContentLoaded", function () {
        bandejaConfig.style.overflowY = "auto";
        body.style.overflowY = "hidden";
     }
+    const bandejaSearch = document.getElementById("searchSectionAside");
+    const btn_cerrarBandejaSearch = document.getElementById("btn__closeSectionSearchAside");
+    const btn_abrirBandejaSearch = document.getElementById("nb__btn-buscar");
+
+    btn_cerrarBandejaSearch.addEventListener("click", cerrarBandejaSearch);
+    btn_abrirBandejaSearch.addEventListener("click", abrirBandejaSearch);
+
+    function cerrarBandejaSearch(){
+      bandejaSearch.style.right = "-100%";
+      bandejaSearch.style.overflowY = "hidden"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+      body.style.overflowY = "auto";
+    }
+
+    function abrirBandejaSearch(){
+      bandejaSearch.style.right = "0";
+      bandejaSearch.style.overflowY = "auto";
+      body.style.overflowY = "hidden";
+    }
 
 
   });//fin de codigo

@@ -90,6 +90,26 @@ document.addEventListener("DOMContentLoaded", function () {
        body.style.overflowY = "hidden";
     }
 
+    //seccion de configuracion
+    const bandejaConfig = document.getElementById("configSectionAside");
+    const btn_cerrarBandejaConfig = document.getElementById("nb__btn-config-closeAside");
+    const btn_abrirBandejaConfig = document.getElementById("btn__OpenConfigSection");
+
+    btn_cerrarBandejaConfig.addEventListener("click", cerrarBandejaConfig);
+    btn_abrirBandejaConfig.addEventListener("click", abrirBandejaConfig);
+
+    function cerrarBandejaConfig(){
+      bandejaConfig.style.right = "-100%";
+      bandejaConfig.style.overflowY = "hidden"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+      body.style.overflowY = "auto";
+    }
+
+    function abrirBandejaConfig(){
+       bandejaConfig.style.right = "0";
+       bandejaConfig.style.overflowY = "auto";
+       body.style.overflowY = "hidden";
+    }
+
 
   });//fin de codigo
 

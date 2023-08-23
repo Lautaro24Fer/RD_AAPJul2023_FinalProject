@@ -45,7 +45,7 @@ hr {
         border-top: 1px solid var(--colorGrey);
     }
 
-    .lf__navbar-inPT a{
+    .lf__navbar-inPT a {
         text-decoration: none;
     }
 
@@ -178,18 +178,20 @@ hr {
 
     /*ASIDES*/
 
-    .logoAbsolute{
+    .logoAbsolute {
         position: absolute;
         right: 0;
         top: 0;
         margin: 1.5em;
     }
-    .logoAbsolute svg{
+
+    .logoAbsolute svg {
         fill: rgb(40, 40, 40);
         height: 2em;
     }
 
-    .lf__aside-tag-tl-messages{/*bandeja de mensajes*/
+    .lf__aside-tag-tl-messages {
+        /*bandeja de mensajes*/
         position: fixed;
         right: -100%;
         bottom: 0;
@@ -206,7 +208,7 @@ hr {
         padding: 5em 1em 0 1em;
     }
 
-    .lf-at-tl-messages-body{
+    .lf-at-tl-messages-body {
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -214,55 +216,61 @@ hr {
         padding: 0 0 3em 0;
     }
 
-    .tl-mb-element{
+    .tl-mb-element {
         display: flex;
         align-items: center;
         gap: 1em;
     }
+
     .tl-mb-element-txt-name,
-    .tl-mb-element-txt-undername-time{
+    .tl-mb-element-txt-undername-time {
         font-weight: bold;
         white-space: nowrap;
     }
-    .tl-mb-element-txt-undername{
+
+    .tl-mb-element-txt-undername {
         font-size: small;
         display: flex;
         gap: .3em;
     }
-    .tl-mb-element-txt-undername-msgContent{
+
+    .tl-mb-element-txt-undername-msgContent {
         min-width: 2em;
         max-width: 9em;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
-    
-    .tl-mb-element-txt-undername-dot svg{
+
+    .tl-mb-element-txt-undername-dot svg {
         fill: rgb(143, 255, 246);
     }
 
-    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img{
+    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img {
         width: 5em;
         height: 5em;
         border-radius: 100%;
     }
 
-    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img img{
+    .lf-at-tl-messages-body .tl-mb-element .tl-mb-element-img img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 100%;
     }
-    .tl-mb-element-txt{
+
+    .tl-mb-element-txt {
         display: flex;
         flex-direction: column;
     }
-    .lf-at-tl-header-messages-title{
+
+    .lf-at-tl-header-messages-title {
         display: flex;
         align-items: center;
         gap: 1em;
     }
-    .btn__closeMessageAside{
+
+    .btn__closeMessageAside {
         background-color: transparent;
         border: none;
         width: 1.5em;
@@ -275,7 +283,7 @@ hr {
     }
 
     /*sesion no iniciada*/
-    .lf__aside-tag-tl-perfil{
+    .lf__aside-tag-tl-perfil {
         position: fixed;
         right: -80%;
         bottom: 0;
@@ -291,7 +299,9 @@ hr {
         transition: right 0.2s ease-in-out;
         padding: 5em 1em 0 1em;
     }
-    .btn__closeAside{
+
+    .btn__closeAside,
+    .btn__closeConfigAside{
         background-color: transparent;
         border: none;
         width: 1.5em;
@@ -302,30 +312,115 @@ hr {
         left: 0;
         margin: 1em;
     }
-    .btn__closeAside svg{
+
+    .btn__closeAside svg,
+    .btn__closeConfigAside svg {
         filter: invert(100%);
         width: 1.5em;
         height: 1.5em;
     }
+
     /*sesion iniciada*/
-    .lf-at-tl-header{
+    .lf-at-tl-header {
         display: flex;
         flex-direction: column;
     }
-    .lf-at-tl-header-title{
+
+    .lf-at-tl-header-title {
         margin: 0 0 1em 0;
     }
-    .lf-at-tl-header-subtitle{
+
+    .lf-at-tl-header-subtitle {
         justify-content: space-evenly;
         display: flex;
         gap: .5em;
     }
-    
-    .__header-subtitle-data{
+
+    .__header-subtitle-data {
         display: flex;
         text-align: center;
         justify-content: space-between;
         gap: 2em;
+    }
+
+    .perfil__disco-favorito {
+        border: 3px solid rgba(255, 217, 0, 0.626);
+        border-radius: 100%;
+        height: 4.5em;
+        width: 4.5em;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lf__mtc-historiesCarrousel-element .perfil__disco-favorito img {
+        height: 4em;
+        width: 4em;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .lf__mtc-historiesCarrousel-element .perfil__disco-favorito:hover {
+        height: 4.2em;
+        width: 4.2em;
+        transition: .1s;
+    }
+
+    .lf__mtc-historiesCarrousel-element .perfil__disco-favorito img:hover {
+        height: 3.7em;
+        width: 3.7em;
+        transition: .1s;
+    }
+
+    /*seccion de configuracion*/
+    .lf__aside-tag-tl-config {
+        position: fixed;
+        right: -100%;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--colorBlack);
+        border: 1px solid var(--colorGreyClaro);
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        color: white;
+        z-index: 200;
+        transition: right 0.2s ease-in-out;
+        padding: 5em 1em 3em 1em;
+    }
+    .__config-container-section-title{
+        color: grey;
+        margin: 0 0 1em 0;
+    }
+    .__config-container-section-body{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .__config-container-section-body-element{
+        display: flex;
+        gap: .5em;
+    }
+    .__config-container-section-body-element-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .__config-container-section-body-element-logo svg{
+        filter: invert(100%);
+        height: 1.5em;
+    }
+    .__config-container-section-body-element-text svg{
+        fill: rgb(109, 109, 109);
+        position: absolute;
+        right: 0;
+        margin: 0 1em 0 0;
+    }
+    .btn-config button {
+        background-color: transparent;
+        border: none;
     }
 
 
@@ -568,6 +663,7 @@ hr {
         border-radius: 1em;
         transition: opacity .5s;
     }
+
     /*FIN DE CARROUSEL DE REELS*/
 
     /*=====</FEED>=====*/

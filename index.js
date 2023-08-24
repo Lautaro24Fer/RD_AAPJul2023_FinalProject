@@ -2,9 +2,15 @@
 //tarjetas
 document.addEventListener("DOMContentLoaded", function () {
 
-  
 
-    const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
+    function ajustarContenido() {
+      const anchoVentana = window.innerWidth;
+    
+      if (anchoVentana <= 768) {
+        // Ejecutar funciones para pantallas pequeñas
+        // Por ejemplo:
+        // ocultarSidebar();
+        const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
   
     botonesCambiarOpacidad.forEach(function (boton) {
       boton.addEventListener("click", function () {
@@ -127,7 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
       bandejaSearch.style.overflowY = "auto";
       body.style.overflowY = "hidden";
     }
-
+      } else {
+        // Ejecutar funciones para pantallas grandes
+        // Por ejemplo:
+        // mostrarSidebar();
+      }
+    }
+    
+    // Llamada inicial y actualización cuando cambie el tamaño de la ventana
+    ajustarContenido();
+    window.addEventListener('resize', ajustarContenido);
 
   });//fin de codigo
 

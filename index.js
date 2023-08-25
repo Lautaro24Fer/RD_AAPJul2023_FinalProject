@@ -6,13 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function ajustarContenido() {
       const anchoVentana = window.innerWidth;
     
+
+
+      /////////PANTALLAS PEQUEÑAS////////////
       if (anchoVentana <= 768) {
         // Ejecutar funciones para pantallas pequeñas
         // Por ejemplo:
         // ocultarSidebar();
-        const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
+        
+      const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
   
-    botonesCambiarOpacidad.forEach(function (boton) {
+      botonesCambiarOpacidad.forEach(function (boton) {
       boton.addEventListener("click", function () {
         const tarjeta = boton.closest(".card");
         const textosModificar = tarjeta.querySelectorAll(".lf__card-text");
@@ -133,10 +137,55 @@ document.addEventListener("DOMContentLoaded", function () {
       bandejaSearch.style.overflowY = "auto";
       body.style.overflowY = "hidden";
     }
-      } else {
-        // Ejecutar funciones para pantallas grandes
-        // Por ejemplo:
-        // mostrarSidebar();
+
+      } 
+      
+      /////////PANTALLAS GRANDES//////////////
+      else {
+        const botonesCambiarOpacidad = document.querySelectorAll(".card-btn");
+  
+      botonesCambiarOpacidad.forEach(function (boton) {
+      boton.addEventListener("click", function () {
+        const tarjeta = boton.closest(".card");
+        const textosModificar = tarjeta.querySelectorAll(".lf__card-text");
+        const cardBtn_img = tarjeta.querySelector(".card-img")
+  
+        textosModificar.forEach(function (textoModificar) {
+          if (textoModificar.style.opacity === "1") {
+            textoModificar.style.opacity = "0";
+            cardBtn_img.style.opacity = "1";
+          } else {
+            textoModificar.style.opacity = "1";
+            cardBtn_img.style.opacity = ".6";
+          }
+        });
+      });
+    });
+
+    const carrouselGifContainers = document.querySelectorAll(".reels__carrousel-element-content");
+    
+
+      carrouselGifContainers.forEach(function (gifContainer) {
+      gifContainer.addEventListener("click", function () {
+        const gifContainerFather = gifContainer.closest(".reels__carrousel-element")
+        const gifContainer_img = gifContainerFather.querySelector(".lf__img-img");
+        const gifContainer_gif = gifContainerFather.querySelector(".lf__img-gif");
+
+
+
+        if(gifContainer_img.style.opacity === "1"){
+          gifContainer_img.style.opacity = "0";
+          gifContainer_gif.style.opacity = "1"
+        }
+        else{
+          gifContainer_img.style.opacity = "1";
+          gifContainer_gif.style.opacity = "0"
+        }
+
+      });
+    });
+
+
       }
     }
     

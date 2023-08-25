@@ -186,6 +186,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    const bandejaSearch = document.getElementById("searchSectionAside");
+    const btn_cerrarBandejaSearch = document.getElementById("btn__closeSectionSearchAside");
+    const btn_abrirBandejaSearch = document.getElementById("nb__btn-buscar");
+
+    btn_cerrarBandejaSearch.addEventListener("click", cerrarBandejaSearch);
+    btn_abrirBandejaSearch.addEventListener("click", abrirBandejaSearch);
+
+    function cerrarBandejaSearch(){
+      bandejaSearch.style.display = "none"
+      bandejaSearch.style.right = "-100%"; //activamos y desactivamos el scroll vertical en funcion de la pagina activa
+    }
+
+    function abrirBandejaSearch(){
+      bandejaSearch.style.display = "block";
+      bandejaSearch.style.right = "0";
+    }
+
+   
+
+    const menuAside = document.getElementById("lf__aside-tag-perfil");
+    const btn_cerrarMenu = document.getElementById("nb__btn-perfil-closeAside");
+    const btn_abrirMenu = document.getElementById("nb__btn-perfil");
+
+    btn_cerrarMenu.addEventListener("click", cerrarMenu);
+    btn_abrirMenu.addEventListener("click", abrirMenu);
+
+    function cerrarMenu(){
+      menuAside.style.display = "none";
+      menuAside.style.right = "0";
+    }
+
+    function abrirMenu(){
+       menuAside.style.right = "0";
+       menuAside.style.display = "block";
+    }
+
+
+
+
+
       }
     }
     
